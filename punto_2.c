@@ -1,15 +1,8 @@
 #include <stdio.h>
-int calcularSuma(int *arr, int largo){
-	int acum = 0;
-	for (int i=0; i<largo; i++){
-		acum+= *(arr + i);
-	}
-	return acum;
-}
-float calcularPromedio(int *arr, int largo){
-	int acum = calcularSuma(arr, largo);
-	return (float)acum/largo;
-}
+int calcularSuma(int *arr, int largo);
+
+float calcularPromedio(int *arr, int largo);
+
 int main(){
 	int largo;
 	printf("Ingresa el largo del arreglo: ");
@@ -27,4 +20,15 @@ int main(){
 	
 	printf("La suma de este arreglo es: %d \n", suma);
 	printf("El promedio del arreglo es: %.2f", promedio);
+}
+int calcularSuma(int *arr, int largo){
+	int acum = 0;
+	for (int i=0; i<largo; i++){
+		acum+= *(arr + i);
+	}
+	return acum;
+}
+float calcularPromedio(int *arr, int largo){
+	int acum = calcularSuma(arr, largo);
+	return (float)acum/largo;
 }

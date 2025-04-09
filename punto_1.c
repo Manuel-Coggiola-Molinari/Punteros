@@ -1,9 +1,6 @@
 #include <stdio.h>
-void intercambioNumeros (int *a, int *b) {
-    int aux= *a;
-    *a = *b;
-    *b = aux;
-}
+void intercambioNumeros (int *a, int *b);
+
 int main () {
     int Num1, Num2;
     printf("Ingrese el primer numero: ");
@@ -13,4 +10,9 @@ int main () {
     printf("Antes: %d %d \n", Num1, Num2);
     intercambioNumeros(&Num1, &Num2);
     printf("Despues: %d %d", Num1, Num2);
+}
+void intercambioNumeros (int *a, int *b) {
+    int aux= *a;
+    *a = *b;
+    *b = aux;
 }

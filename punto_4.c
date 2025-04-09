@@ -1,15 +1,7 @@
 #include <stdio.h>
-void copiarArreglo(int *origen, int *destino, int largo){
-	for(int i=0; i<largo; i++){
-		*(destino+i) = *(origen+i);
-	}
-}
-void mostrarArreglo(int *arr, int largo){
-	for(int i=0; i<largo; i++){
-		printf("%d ", *(arr+i));
-	}
-	printf("\n");
-}
+void copiarArreglo(int *origen, int *destino, int largo);
+void mostrarArreglo(int *arr, int largo);
+
 int main(){
 	int largo;
 	printf("Ingresa el largo del arreglo: ");
@@ -30,4 +22,16 @@ int main(){
 	
 	printf("Arreglo copiado: ");
 	mostrarArreglo(arregloCopia, largo);
+}
+
+void copiarArreglo(int *origen, int *destino, int largo){
+	for(int i=0; i<largo; i++){
+		*(destino+i) = *(origen+i);
+	}
+}
+void mostrarArreglo(int *arr, int largo){
+	for(int i=0; i<largo; i++){
+		printf("%d ", *(arr+i));
+	}
+	printf("\n");
 }
